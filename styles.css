@@ -20,7 +20,7 @@ body {
     align-items: center;
     position: relative;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #f1ba86;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -55,7 +55,7 @@ body {
 
 .splunk-logo {
     left: 0;
-    width: 35%;
+    width: 30%;
     object-fit: cover;
 }
 
@@ -117,4 +117,44 @@ footer a {
 
 footer a:hover {
     color: #ccc;
+}
+
+.code-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+}
+
+.code-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+#curl-code {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+#copy-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#copy-btn:hover {
+    background-color: #0056b3;
 }

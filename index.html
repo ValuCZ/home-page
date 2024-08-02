@@ -22,7 +22,7 @@
 
     <section class="phase">
         <div class="phase-content">
-            <h2>Introduction</h2>
+            <h2>Overview</h2>
             <p>This project showcases a comprehensive and practical cross-application skill set. Key components include:</p>
             <b>
                 <p>⮞ Creating and managing virtual machines (VMs) in Google Cloud Platform (GCP)</p>
@@ -30,6 +30,9 @@
                 <p>⮞ Registering and updating DNS record, obtaining and deploying SSL certificate.</p>
                 <p>⮞ Connecting the Logs to a Splunk instance for processing and analysis</p>
             </b>
+            <br>
+            <br>
+            <p>Feal free to test the funcionalities or inspect the configuration on <b><a href="https://github.com/ValuCZ" target="_blank">GitHub</a></b></p>
         </div>
     </section>
 
@@ -37,34 +40,49 @@
         <div class="phase-content">
             <h2>Architecture</h2>
             <p>Following diagram represents the top-level architecture and relationships between different components used in the project.</p>
-            <img src="phase2.jpg" alt="Phase 2">
-        </div>
-    </section>
-
-    <section class="phase">
-        <div class="phase-content">
-            <h2>Apache proxying</h2>
-            <p>This section presents network routing related utilizating apache proxying and mock python Flask servers</p>
-            <p>project hosts 2 Flask entpoints</p>
-            
-            <img src="phase3.jpg" alt="Phase 3">
-        </div>
-    </section>
-
-    <section class="phase">
-        <div class="phase-content">
-            <h2>Phase 4: Final Showcase</h2>
-            <p>Compiled the entire project into a modern showcase webpage, highlighting the skills and technologies used in each phase.</p>
-            <img src="phase4.jpg" alt="Phase 4">
+            <img src="computer.png" alt="Phase 2">
         </div>
     </section>
 
     <section class="code-section">
         <div class="code-content">
-            <h2>cURL Example</h2>
-            <pre id="curl-code">curl -V https://abc.com</pre>
-            <button id="copy-btn">Copy</button>
+            <h2>Apache proxying</h2>
+            <p>This section presents network routing related utilizating apache proxying and mock python Flask servers</p>
+            <p>Project hosts 2 Flask entpoints and joined balanced access point. You can easily access severs directly via brwoser:</p>
+            <p><a href="https://ovalu.freedynamicdns.org:5000/" target="_blank">Server 1</a></p>
+            <p><a href="https://ovalu.freedynamicdns.org:5001/" target="_blank">Server 2</a></p>
+            <p>Or benefit from balanced roundrobin access point with a health check monitor. This route will alternate between both servers till they´re configured to return non-error status code</p>
+            <p><a href="https://ovalu.freedynamicdns.org:4000/" target="_blank">Balaced Access Point</a></p>
+            <p> you can try and set an internal status code for any server using an example bellow:</p>
+            <pre class="curl-code">curl -X POST -H "Content-Type: application/json" -d "{\"status_code\": 500, \"message\": \"status set on error code 500\"}" https://ovalu.freedynamicdns.org:5000/state/</pre>
+            <button class="copy-btn">Copy</button>
+            
+            <p><br></p>
+            <pre class="curl-code">curl -X POST -H "Content-Type: application/json" -d "{\"status_code\": 200, \"message\": \"Status set on OK code 200\"}" https://ovalu.freedynamicdns.org:5000/state/</pre>
+            <button class="copy-btn">Copy</button>
         </div>
+    </section>
+
+
+
+    <section class="phase">
+        <div class="phase-content">
+            <h2>Splunk</h2>
+            <p>You may inspect logs generated in the project in an Splunk instance avalible here:</p>
+            <b><p><a href="https://ovalu.freedynamicdns.org:8443/" target="_blank">Splunk Server</a></p></b>
+            <p>Login: <b>visitor</b></p>
+            <p>password: <b>splunkvisitor</b></p>
+
+            <img src="splunk1.png" alt="Phase 4">
+            <br>
+            <p></p>
+            <br>
+            <p></p>
+            <img src="splunk2.png" alt="Phase 4">
+        </div>
+    </section>
+
+
     </section>
 
     <footer>

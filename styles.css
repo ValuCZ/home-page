@@ -96,6 +96,7 @@ body {
 }
 
 footer {
+    z-index: 2147483647;
     text-align: center;
     padding: 20px;
     background-color: #333;

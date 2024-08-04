@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Showcase Project</title>
+    <link rel="icon" type="image/png" href="cyber-security.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -54,11 +55,11 @@
             <p>Or benefit from balanced roundrobin access point with a health check monitor. This route will alternate between both servers till they´re configured to return non-error status code</p>
             <p><a href="https://ovalu.freedynamicdns.org:4000/" target="_blank">Balaced Access Point</a></p>
             <p> you can try and set an internal status code for any server using an example bellow:</p>
-            <pre class="curl-code">curl -X POST -H "Content-Type: application/json" -d "{\"status_code\": 500, \"message\": \"status set on error code 500\"}" https://ovalu.freedynamicdns.org:5000/state/</pre>
+            <pre class="curl-code">curl -X POST -H "Content-Type: application/json" -d "{\"status_code\": 500, \"message\": \"status set on error code 500\"}" https://ovalu.freedynamicdns.org:5000/state</pre>
             <button class="copy-btn">Copy</button>
             
             <p><br></p>
-            <pre class="curl-code">curl -X POST -H "Content-Type: application/json" -d "{\"status_code\": 200, \"message\": \"Status set on OK code 200\"}" https://ovalu.freedynamicdns.org:5000/state/</pre>
+            <pre class="curl-code">curl -X POST -H "Content-Type: application/json" -d "{\"status_code\": 200, \"message\": \"Status set on OK code 200\"}" https://ovalu.freedynamicdns.org:5000/state</pre>
             <button class="copy-btn">Copy</button>
         </div>
     </section>
@@ -76,6 +77,15 @@
             <p><br></p>
             <p><br></p>
             <img src="splunk2.png" alt="Phase 4">
+        </div>
+    </section>
+
+    <section class="phase">
+        <div class="phase-content">
+            <h2>My Other Related Projects</h2>
+            <p><br></p>
+            <b><p><a href="https://is.muni.cz/th/nz3yp/?studium=692372" target="_blank">Web Application for Management of Vulnerabilities</a></p></b>
+            <b><p><a href="https://youtu.be/el639e23Do4?si=q8Ik_VPmcaOVp3xE" target="_blank">Sample Elasticsearch pipeline</a></p></b>
         </div>
     </section>
 
